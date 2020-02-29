@@ -27,6 +27,7 @@ export const Button = styled.TouchableOpacity`
 `;
 
 export const Item = styled.View`
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #fff333;
@@ -42,4 +43,19 @@ export const CustomText = styled.Text`
 
 export const List = styled.FlatList`
   flex: 1;
+`;
+
+export const NameContainer = styled.View`
+  flex: 5;
+`;
+
+export const ButtonContainer = styled.View`
+  flex: 1;
+`;
+
+export const RemoveButton = styled.TouchableOpacity`
+  flex: 1;
+  background-color: #c92e16;
+  justify-content: center;
+  align-items: center;
 `;

@@ -1,7 +1,18 @@
 import React, {useState} from 'react';
 import {Text} from 'react-native';
 
-import {Container, Row, Input, Button, Item, CustomText, List} from './styles';
+import {
+  Container,
+  Row,
+  Input,
+  Button,
+  Item,
+  CustomText,
+  List,
+  RemoveButton,
+  NameContainer,
+  ButtonContainer,
+} from './styles';
 
 export default function App() {
   const [texto, setTexto] = useState();
@@ -14,6 +25,10 @@ export default function App() {
     } else {
       alert('Nome vazio!');
     }
+  };
+
+  const removerItem = item => {
+    setLista(lista.filter(arrItem => arrItem !== item));
   };
 
   return (
@@ -29,7 +44,14 @@ export default function App() {
         keyExtractor={item => item}
         renderItem={({item}) => (
           <Item>
-            <Text>{item}</Text>
+            <NameContainer>
+              <Text>{item}</Text>
+            </NameContainer>
+            <ButtonContainer>
+              <RemoveButton onPress={() => removerItem(item)}>
+                <Text>Remover</Text>
+              </RemoveButton>
+            </ButtonContainer>
           </Item>
         )}
       />
