@@ -26,14 +26,13 @@ export const Button = styled.TouchableOpacity`
   align-items: center;
 `;
 
-export const Item = styled.TouchableOpacity`
-  flex: 1;
-  min-height: 50px;
+export const Item = styled.View`
   justify-content: center;
   align-items: center;
   background-color: #fff333;
   margin: 2px 0px;
   border: 1px solid black;
+  height: 50px;
 `;
 
 export const CustomText = styled.Text`
@@ -43,5 +42,4 @@ export const CustomText = styled.Text`
 
 export const List = styled.FlatList`
   flex: 1;
-  height: 100%;
 `;
